@@ -1,0 +1,89 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  background-color: #c4c4c4;
+}
+
+.container {
+  display: flex;
+  width: clamp(100px, 100%, 250px);
+  margin: 80px auto;
+  flex-direction: column;
+}
+
+.input-search {
+  display: block;
+  width: -webkit-fill-available;
+  padding: 6px 10px;
+  z-index: 10;
+}
+
+.datalist {
+  background-color: #e3e3e3;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.option {
+  padding: 6px 10px;
+  border: 1px solid black;
+  width: inherit;
+}
+.option:hover {
+  background-color: #65cdf9;
+}
+
+.searchField {
+  position: relative;
+  margin-bottom: 40px;
+  width: auto;
+}
+
+.itemsFields {
+  display: flex;
+  width: inherit;
+  flex-direction: column;
+}
+
+.itemsFields button {
+  border: none;
+  background: none;
+}
+
+.itemsFields__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  padding: 6px 10px;
+  list-style-type: none;
+  background-color: #e27beb;
+}
+
+
+.itemsFields__content > li {
+  list-style-type: none;
+}
+
+.btn--delete {
+  border: none;
+  cursor: pointer;
+}
+.btn--delete:hover {
+  transform: scale(1.1);
+}
